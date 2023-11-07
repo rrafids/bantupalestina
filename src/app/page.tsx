@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <Navbar />
 
-        <div className='text-white flex flex-col items-center text-center mt-[200px] px-[100px] space-y-[15px]'>
+        <div className='text-white flex flex-col items-center text-center mt-[200px] 2xl:mt-[300px] px-[100px] space-y-[15px]'>
           <span className='text-[70px] font-bold leading-[75px]'>
             Satu Sumber Donasi Terpercaya untuk Palestina
           </span>
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
 
       {/* About Palestine */}
-      <div className='mt-[275px] grid grid-cols-2 items-center'>
+      <div className='mt-[270px] grid grid-cols-2 items-center'>
         <div className='relative h-[500px]'>
           <Image
             src='/images/banner_palestine_2.png'
@@ -47,7 +47,7 @@ export default function Home() {
           />
         </div>
         <div className='flex flex-col place-content-center p-[30px] space-y-[15px]'>
-          <h1 className='font-extrabold text-[35px] text-primary-dark'>
+          <h1 className='font-bold text-[35px] text-primary-dark'>
             Palestina, Negeri yang Terjajah
           </h1>
           <p>
@@ -63,7 +63,7 @@ export default function Home() {
       {/* Conflict Fact */}
       <div className='px-[100px] mt-[50px] space-y-[20px]'>
         <div className='space-y-[10px]'>
-          <h1 className='font-extrabold text-[35px] text-primary-dark'>
+          <h1 className='font-bold text-[35px] text-primary-dark'>
             Fakta dalam Konflik
           </h1>
           <p>
@@ -73,7 +73,7 @@ export default function Home() {
           </p>
         </div>
         <div className='grid grid-cols-2 gap-[20px]'>
-          <div className='relative w-full h-[275px]'>
+          <div className='relative w-full h-[275px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_1.png'
@@ -82,7 +82,7 @@ export default function Home() {
               alt='banner fact 1'
             />
           </div>
-          <div className='relative w-full h-[275px]'>
+          <div className='relative w-full h-[275px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_2.png'
@@ -91,7 +91,7 @@ export default function Home() {
               alt='banner fact 2'
             />
           </div>
-          <div className='relative w-full h-[275px]'>
+          <div className='relative w-full h-[275px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_3.png'
@@ -100,7 +100,7 @@ export default function Home() {
               alt='banner fact 3'
             />
           </div>
-          <div className='relative w-full h-[275px]'>
+          <div className='relative w-full h-[275px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_4.png'
