@@ -12,8 +12,9 @@ export default function Navbar() {
     }
   };
 
-  window.addEventListener('scroll', changeColor);
-
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeColor);
+  }
   return (
     <div
       style={{
