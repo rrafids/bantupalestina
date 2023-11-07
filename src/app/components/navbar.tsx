@@ -19,9 +19,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div>
-        <button className='bg-primary py-2 px-3 rounded'>
-          Berdonasi Sekarang
-        </button>
+        <button className='bg-primary py-2 px-5 rounded'>Cari Donasi</button>
       </div>
     </div>
   );
