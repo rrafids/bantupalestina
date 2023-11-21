@@ -4,15 +4,11 @@ export default function Logo() {
   return (
     <div className='flex items-center'>
       <Image
-        src='/images/palestine_mini_map.png'
+        src='/images/logo.png'
         alt='palestine mini map'
-        width={35}
-        height={35}
+        width={175}
+        height={175}
       />
-      <div className='text-white text-[18px]'>
-        <h1>Support</h1>
-        <h1>Palestine.info</h1>
-      </div>
     </div>
   );
 }
