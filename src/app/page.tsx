@@ -129,7 +129,7 @@ export default function Home() {
       </div>
 
       {/* List Donation */}
-      <div className='w-full px-[120px] mt-[50px] space-y-[20px]'>
+      <div className='w-full px-[30px] mt-[50px] space-y-[20px]'>
         <p className='font-semibold'>Daftar Donasi</p>
         <h1 className='font-extrabold text-4xl'>
           Temukan Donasi yang Terpercaya
@@ -138,12 +138,93 @@ export default function Home() {
           Kami mengumpulkan berbagai sumber campaign donasi untuk Palestina yang
           terpercaya dan sudah divalidasi keaslian informasinya
         </p>
+
+        <div className='flex flex-col space-y-2'>
+          <div className='w-full'>
+            <div className='rounded border-2 border-gray-200 float-right w-max px-2 py-1'>
+              <input placeholder='Cari...' />
+            </div>
+          </div>
+
+          <table className='w-full'>
+            <thead className='bg-green-100 text-left'>
+              <th className='p-2'>No</th>
+              <th className='p-2'>Campaign</th>
+              <th className='p-2'>Penyelenggara</th>
+              <th className='p-2'>Aksi</th>
+            </thead>
+
+            <tbody>
+              {[1, 2].map((key) => (
+                <tr key={key} className='p-1'>
+                  <td className='p-2'>{key}</td>
+                  <td className='p-2'>Dana Harapan untuk Pahlawan</td>
+                  <td className='p-2'>Kitabisa</td>
+                  <td className='p-2'>
+                    <div className='flex space-x-1'>
+                      <button className='text-white text-sm bg-green-600 p-2 rounded'>
+                        Bagikan
+                      </button>
+                      <button className='text-white text-sm bg-green-600 p-2 rounded'>
+                        Donasi
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className='w-full flex place-content-center'>
+          <button className='bg-green-600 text-white px-3 py-2 text-sm rounded'>
+            Lihat Selengkapnya
+          </button>
+        </div>
       </div>
 
       {/* About Us */}
-      <div>About Us</div>
+      <div className='mt-[50px]'>
+        <div className='grid grid-cols-2'>
+          <div className='p-3 space-y-4'>
+            <p className='font-bold'>supportpalestine.info</p>
+            <h1 className='text-4xl font-extrabold'>
+              Satu Sumber Donasi Terpercaya untuk Palestina
+            </h1>
+            <div className='bg-green-100 p-3 space-y-2'>
+              <div className='font-extrabold text-green-800 text-lg'>
+                Logo - Visi Kami
+              </div>
+              <p className='text-sm'>
+                Menyebarluaskan informasi terkait donasi untuk Palestina dari
+                sumber-sumber terpercaya agar mudah dicari dalam satu tempat
+              </p>
+            </div>
+            <div className='bg-green-100 p-3 space-y-2'>
+              <div className='font-extrabold text-green-800 text-lg'>
+                Logo - Misi Kami
+              </div>
+              <p className='text-sm'>
+                Menghasilkan platform yang menghimpun beragam donasi untuk
+                Palestina yang bersifat open source
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className='relative w-full h-[400px] 2xl:h-[550px]'>
+              <Image
+                className='rounded-l-lg'
+                src='/images/banner_palestine_3.png'
+                layout='fill'
+                objectFit='cover'
+                alt='banner fact 4'
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div>Umpan Balik</div>
+      <div className='mt-[50px]'>Umpan Balik</div>
 
       {/* Footer */}
       <footer>Footer</footer>
