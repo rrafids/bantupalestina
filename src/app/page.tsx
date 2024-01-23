@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import Navbar from './components/navbar';
+import Logo from './components/logo';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -192,8 +194,14 @@ export default function Home() {
               Satu Sumber Donasi Terpercaya untuk Palestina
             </h1>
             <div className='bg-green-100 p-3 space-y-2'>
-              <div className='font-extrabold text-green-800 text-lg'>
-                Logo - Visi Kami
+              <div className='font-extrabold text-green-800 text-lg flex space-x-2'>
+                <Image
+                  src='/images/visi.png'
+                  width={30}
+                  height={10}
+                  alt='visi icon'
+                />
+                <h1>Visi Kami</h1>
               </div>
               <p className='text-sm'>
                 Menyebarluaskan informasi terkait donasi untuk Palestina dari
@@ -201,8 +209,14 @@ export default function Home() {
               </p>
             </div>
             <div className='bg-green-100 p-3 space-y-2'>
-              <div className='font-extrabold text-green-800 text-lg'>
-                Logo - Misi Kami
+              <div className='font-extrabold text-green-800 text-lg flex space-x-2'>
+                <Image
+                  src='/images/visi.png'
+                  width={30}
+                  height={20}
+                  alt='visi icon'
+                />
+                <h1>Misi Kami</h1>
               </div>
               <p className='text-sm'>
                 Menghasilkan platform yang menghimpun beragam donasi untuk
@@ -224,10 +238,38 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='mt-[50px]'>Umpan Balik</div>
+      <div className='mt-[50px] bg-green-50 text-center w-full space-y-3 py-5'>
+        <p className='font-bold'>Umpan Balik</p>
+        <h1 className='font-bold text-3xl'>Sampaikan Umpan Balik Anda</h1>
+        <p>
+          Tiap masukkan, saran, dan kritik anda sangat berarti untuk
+          pengembangan kami berikutnya
+        </p>
+        <button className='bg-green-700 text-white rounded-lg px-3 py-2'>
+          Sampaikan Feedback
+        </button>
+      </div>
 
       {/* Footer */}
-      <footer>Footer</footer>
+      <footer className='bg-gray-800 w-full flex place-content-between items-center p-7'>
+        <div>
+          <Logo />
+        </div>
+        <div className='flex space-x-5'>
+          <Link href=''>
+            <h1 className='text-white'>Beranda</h1>
+          </Link>
+          <Link href=''>
+            <h1 className='text-white'>Daftar Donasi</h1>
+          </Link>
+          <Link href=''>
+            <h1 className='text-white'>Tentang Kami</h1>
+          </Link>
+          <Link href=''>
+            <h1 className='text-white'>Bahasa Indonesia</h1>
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }
