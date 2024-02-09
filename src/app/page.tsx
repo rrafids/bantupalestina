@@ -4,8 +4,40 @@ import Image from 'next/image';
 import Navbar from './components/navbar';
 import Logo from './components/logo';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+interface Response {
+  data: iWebsite[];
+}
+
+interface iWebsite {
+  id: number;
+  name: string;
+  url: string;
+  provider: string;
+}
 
 export default function Home() {
+  const defaultLimit = 5;
+  const [listWebsite, setListWebsites] = useState<iWebsite[]>([]);
+  const [limit, setLimit] = useState(defaultLimit);
+
+  useEffect(() => {
+    const fetchListWebsites = async () => {
+      const url =
+        'https://script.googleusercontent.com/macros/echo?user_content_key=FiRKr7qyfH94kB1aFJcRBgVyLlQ1nFmA_FviSK8b3WCOZdTQppzVip5QqVqZfW5--rKaw238pYK9I2qgEdWoYwNBE68A_i6am5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnO6IIApaP4NLpbWvPJ-2E73cg4em5h2VZogOMsWsvX0k4rfwTzegdLd9viB1PEh5aZKAzIga5PSpCiiUOqhdWPpLGe6w3eg_m9z9Jw9Md8uu&lib=MmHBxpjMDhYgNZTbUjqshrouyVLa1n_tA';
+
+      const list = await fetch(url);
+      const listJson: Response = await list.json();
+
+      console.log('response', listJson.data);
+
+      setListWebsites(listJson.data);
+    };
+
+    fetchListWebsites();
+  }, [listWebsite]);
+
   return (
     <main className='flex min-h-screen flex-col items-center justify-between'>
       {/* Header & Banner */}
@@ -25,13 +57,10 @@ export default function Home() {
         </div>
         <Navbar />
 
-        <div className='text-white flex flex-col items-center text-center mt-[200px] 2xl:mt-[300px] px-[150px] space-y-[15px]'>
+        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] px-[150px] space-y-[30px]'>
           <span className='text-[60px] font-bold leading-[75px]'>
-            Satu Sumber Donasi Terpercaya untuk Palestina
+            Cari Sumber Donasi Terpercaya untuk Palestina
           </span>
-          <h1 className='text-[25px]'>
-            Bersama Membantu Palestina Atas Nama Kemanusiaan
-          </h1>
 
           <button className='bg-primary rounded px-7 py-2 text-[20px]'>
             Cari Donasi
@@ -39,33 +68,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* About Palestine */}
-      <div className='mt-[150px] bg-primary-semidark'>
-        <div className='flex flex-col place-content-center py-[40px] px-[50px] space-y-[15px] text-center text-white'>
-          <h1 className='font-bold text-[30px]'>
-            Palestina, Negeri yang Terjajah
-          </h1>
-          <p>
-            Lebih dari 70 tahun, Palestina hidup di bawah bayang-bayang zionis
-            Israel. Kota suci bagi 3 agama kembali lagi terusik. Banyak warga
-            Palestina yang harus kehilangan tanah, rumah, bahkan kehilangan
-            keluarga tercinta di negara mereka sendiri. Dunia seakan-akan
-            menutup mata akan tragedi yang mereka rasakan.
-          </p>
-        </div>
-      </div>
-
       {/* Conflict Fact */}
-      <div className='px-[100px] mt-[50px] space-y-[20px]'>
+      <div className='px-[100px] mt-[300px] space-y-[20px] w-full'>
         <div className='space-y-[10px]'>
           <h1 className='font-bold text-[35px] text-primary-dark'>
             Fakta dalam Konflik
           </h1>
-          <p>
-            Selama konflik, korban meninggal, luka-luka, bahkan pengungsi kian
-            bertambah akibat perang yang terjadi. Selain itu, banyak kebutuhan
-            pokok seperti air, makanan, dan obat-obatan yang sulit diakses
-          </p>
         </div>
         <div className='grid grid-cols-2 gap-[20px]'>
           <div className='relative w-full h-[250px] 2xl:h-[300px]'>
@@ -131,7 +139,7 @@ export default function Home() {
       </div>
 
       {/* List Donation */}
-      <div className='w-full px-[30px] mt-[50px] space-y-[20px]'>
+      <div className='w-full px-[100px] mt-[50px] space-y-[20px]'>
         <p className='font-semibold'>Daftar Donasi</p>
         <h1 className='font-extrabold text-4xl'>
           Temukan Donasi yang Terpercaya
@@ -149,51 +157,64 @@ export default function Home() {
           </div>
 
           <table className='w-full'>
-            <thead className='bg-green-100 text-left'>
+            <thead className='bg-[#EDF7F5] text-left'>
               <th className='p-2'>No</th>
               <th className='p-2'>Campaign</th>
               <th className='p-2'>Penyelenggara</th>
-              <th className='p-2'>Aksi</th>
+              <th className='p-2 text-center'>Aksi</th>
             </thead>
 
             <tbody>
-              {[1, 2].map((key) => (
-                <tr key={key} className='p-1'>
-                  <td className='p-2'>{key}</td>
-                  <td className='p-2'>Dana Harapan untuk Pahlawan</td>
-                  <td className='p-2'>Kitabisa</td>
-                  <td className='p-2'>
-                    <div className='flex space-x-1'>
-                      <button className='text-white text-sm bg-green-600 p-2 rounded'>
-                        Bagikan
-                      </button>
-                      <button className='text-white text-sm bg-green-600 p-2 rounded'>
-                        Donasi
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
+              {listWebsite.map(
+                (data: iWebsite) =>
+                  limit >= data.id && (
+                    <tr key={data.id} className='p-1'>
+                      <td className='p-2'>{data.id}</td>
+                      <td className='p-2'>{data.name}</td>
+                      <td className='p-2'>{data.provider}</td>
+                      <td className='p-2'>
+                        <div className='flex place-content-center space-x-1'>
+                          <button className='text-white text-sm bg-primary p-2 rounded'>
+                            <div>
+                              <h1>Salin</h1>
+                            </div>
+                          </button>
+                          <a
+                            href={`${data.url}`}
+                            target='__blank'
+                            className='text-white text-sm bg-primary p-2 rounded'
+                          >
+                            Donasi
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  )
+              )}
             </tbody>
           </table>
         </div>
 
         <div className='w-full flex place-content-center'>
-          <button className='bg-green-600 text-white px-3 py-2 text-sm rounded'>
-            Lihat Selengkapnya
-          </button>
+          {limit === defaultLimit && (
+            <button
+              onClick={() => setLimit(listWebsite.length)}
+              className='bg-primary text-white px-3 py-2 rounded'
+            >
+              Lihat Selengkapnya
+            </button>
+          )}
         </div>
       </div>
 
       {/* About Us */}
-      <div className='mt-[50px]'>
-        <div className='grid grid-cols-2'>
+      <div className='mt-[50px] pl-[30px]'>
+        <div className='grid grid-cols-2 items-center gap-3'>
           <div className='p-3 space-y-4'>
-            <p className='font-bold'>supportpalestine.info</p>
             <h1 className='text-4xl font-extrabold'>
               Satu Sumber Donasi Terpercaya untuk Palestina
             </h1>
-            <div className='bg-green-100 p-3 space-y-2'>
+            <div className='bg-[#EDF7F5] p-3 space-y-3'>
               <div className='font-extrabold text-green-800 text-lg flex space-x-2'>
                 <Image
                   src='/images/visi.png'
@@ -204,11 +225,11 @@ export default function Home() {
                 <h1>Visi Kami</h1>
               </div>
               <p className='text-sm'>
-                Menyebarluaskan informasi terkait donasi untuk Palestina dari
-                sumber-sumber terpercaya agar mudah dicari dalam satu tempat
+                Menyediakan informasi sumber-sumber donasi terpercaya untuk
+                Palestina
               </p>
             </div>
-            <div className='bg-green-100 p-3 space-y-2'>
+            <div className='bg-[#EDF7F5] p-3 space-y-3'>
               <div className='font-extrabold text-green-800 text-lg flex space-x-2'>
                 <Image
                   src='/images/visi.png'
@@ -228,7 +249,7 @@ export default function Home() {
             <div className='relative w-full h-[400px] 2xl:h-[550px]'>
               <Image
                 className='rounded-l-lg'
-                src='/images/banner_palestine_3.png'
+                src='/images/rakyat_pl.png'
                 layout='fill'
                 objectFit='cover'
                 alt='banner fact 4'
@@ -238,15 +259,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='mt-[50px] bg-green-50 text-center w-full space-y-3 py-5'>
-        <p className='font-bold'>Umpan Balik</p>
+      <div className='mt-[50px] bg-[#EDF7F5] text-center w-full space-y-5 py-5'>
         <h1 className='font-bold text-3xl'>Sampaikan Umpan Balik Anda</h1>
         <p>
           Tiap masukkan, saran, dan kritik anda sangat berarti untuk
           pengembangan kami berikutnya
         </p>
-        <button className='bg-green-700 text-white rounded-lg px-3 py-2'>
-          Sampaikan Feedback
+        <button className='bg-primary text-white rounded px-5 py-2'>
+          Beri Feedback
         </button>
       </div>
 
@@ -257,16 +277,7 @@ export default function Home() {
         </div>
         <div className='flex space-x-5'>
           <Link href=''>
-            <h1 className='text-white'>Beranda</h1>
-          </Link>
-          <Link href=''>
             <h1 className='text-white'>Daftar Donasi</h1>
-          </Link>
-          <Link href=''>
-            <h1 className='text-white'>Tentang Kami</h1>
-          </Link>
-          <Link href=''>
-            <h1 className='text-white'>Bahasa Indonesia</h1>
           </Link>
         </div>
       </footer>
