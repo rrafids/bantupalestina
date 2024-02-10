@@ -80,7 +80,7 @@ export default function Home() {
           </h1>
         </div>
         <div className='grid lg:grid-cols-2 gap-[20px]'>
-          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_1.png'
@@ -89,7 +89,7 @@ export default function Home() {
               alt='banner fact 1'
             />
           </div>
-          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_2.png'
@@ -98,7 +98,7 @@ export default function Home() {
               alt='banner fact 2'
             />
           </div>
-          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_3.png'
@@ -107,7 +107,7 @@ export default function Home() {
               alt='banner fact 3'
             />
           </div>
-          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_4.png'
