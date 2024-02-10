@@ -144,7 +144,7 @@ export default function Home() {
 
       {/* List Donation */}
       <div id='list-donation' />
-      <div className='w-full px-[100px] space-y-[20px] mt-[160px]'>
+      <div className='w-full px-[100px] space-y-[20px] mt-[100px]'>
         <p className='font-semibold'>Daftar Donasi</p>
         <h1 className='font-extrabold text-4xl'>
           Temukan Sumber Donasi Terpercaya
