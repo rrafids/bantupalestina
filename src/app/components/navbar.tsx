@@ -24,7 +24,9 @@ export default function Navbar() {
         color && 'bg-[#22262F] opacity-96'
       } fixed w-full flex items-center justify-between px-[10px] md:px-[75px] py-[20px] text-white`}
     >
-      <Logo />
+      <a href='#'>
+        <Logo />
+      </a>
       <div>
         <a href='#list-donation'>
           <button className='bg-primary py-2 px-5 rounded hover:bg-green-600'>
