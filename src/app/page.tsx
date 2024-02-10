@@ -73,7 +73,7 @@ export default function Home() {
       </div>
 
       {/* Conflict Fact */}
-      <div className='px-[25px] md:px-[100px] mt-[320px] sm:mt-[400px] md:mt-[300px] space-y-[20px] w-full'>
+      <div className='px-[15px] md:px-[100px] mt-[320px] sm:mt-[400px] md:mt-[300px] space-y-[20px] w-full'>
         <div className='space-y-[10px]'>
           <h1 className='font-bold text-[25px] sm:text-[35px] text-primary-dark'>
             Palestina Butuh Kita
