@@ -59,7 +59,7 @@ export default function Home() {
         </div>
         <Navbar />
 
-        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] md:px-[100px] lg:px-[150px] space-y-[30px]'>
+        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] px-[10pxc] md:px-[100px] lg:px-[150px] space-y-[30px]'>
           <span className='text-[30px] md:text-[50px] lg:text-[60px] font-bold md:leading-[75px]'>
             Cari Sumber Donasi Terpercaya untuk Palestina
           </span>
