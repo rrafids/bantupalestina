@@ -22,7 +22,7 @@ export default function Navbar() {
       }}
       className={`${
         color && 'bg-[#22262F] opacity-96'
-      } fixed w-full flex items-center justify-between px-[75px] py-[20px] text-white`}
+      } fixed w-full flex items-center justify-between px-[10px] md:px-[75px] py-[20px] text-white`}
     >
       <Logo />
       <div>

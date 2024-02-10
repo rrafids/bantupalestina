@@ -59,8 +59,8 @@ export default function Home() {
         </div>
         <Navbar />
 
-        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] px-[150px] space-y-[30px]'>
-          <span className='text-[60px] font-bold leading-[75px]'>
+        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] md:px-[100px] lg:px-[150px] space-y-[30px]'>
+          <span className='text-[30px] md:text-[50px] lg:text-[60px] font-bold md:leading-[75px]'>
             Cari Sumber Donasi Terpercaya untuk Palestina
           </span>
 
@@ -73,14 +73,14 @@ export default function Home() {
       </div>
 
       {/* Conflict Fact */}
-      <div className='px-[100px] mt-[300px] space-y-[20px] w-full'>
+      <div className='px-[25px] md:px-[100px] mt-[350px] sm:mt-[400px] md:mt-[300px] space-y-[20px] w-full'>
         <div className='space-y-[10px]'>
-          <h1 className='font-bold text-[35px] text-primary-dark'>
+          <h1 className='font-bold text-[25px] sm:text-[35px] text-primary-dark'>
             Palestina Butuh Kita
           </h1>
         </div>
-        <div className='grid grid-cols-2 gap-[20px]'>
-          <div className='relative w-full h-[250px] 2xl:h-[300px]'>
+        <div className='grid lg:grid-cols-2 gap-[20px]'>
+          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_1.png'
@@ -89,7 +89,7 @@ export default function Home() {
               alt='banner fact 1'
             />
           </div>
-          <div className='relative w-full h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_2.png'
@@ -98,7 +98,7 @@ export default function Home() {
               alt='banner fact 2'
             />
           </div>
-          <div className='relative w-full h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_3.png'
@@ -107,7 +107,7 @@ export default function Home() {
               alt='banner fact 3'
             />
           </div>
-          <div className='relative w-full h-[250px] 2xl:h-[300px]'>
+          <div className='relative w-full h-[150px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
               src='/images/banner_fact_4.png'
@@ -118,12 +118,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='w-full px-[100px] mt-[15px] text-gray-600'>
+      <div className='w-full px-[25px] md:px-[100px] mt-[15px] text-gray-600'>
         <p>Data dirangkum dari berbagai sumber per 5 November 2023</p>
       </div>
 
       {/* Middle Promotion Banner */}
-      <div className='relative w-[1000px]  h-[200px] 2xl:h-[250px] my-[50px]'>
+      <div className='relative w-full h-[100px] sm:h-[150px] md:h-[200px] xl:h-[300px] my-[50px]'>
         <Image
           className='rounded-lg'
           src='/images/hadits_muslim.png'
@@ -133,7 +133,7 @@ export default function Home() {
         />
       </div>
 
-      <div className='relative w-full h-[400px] 2xl:h-[550px]'>
+      <div className='relative w-full h-[100px] sm:h-[200px] md:h-[300px] xl:h-[550px]'>
         <Image
           src='/images/banner_palestine_3.png'
           layout='fill'
@@ -144,7 +144,7 @@ export default function Home() {
 
       {/* List Donation */}
       <div id='list-donation' />
-      <div className='w-full px-[100px] space-y-[20px] mt-[100px]'>
+      <div className='w-full px-[25px] md:px-[100px] space-y-[20px] mt-[25px] md:mt-[100px]'>
         <p className='font-semibold'>Daftar Donasi</p>
         <h1 className='font-extrabold text-4xl'>
           Temukan Sumber Donasi Terpercaya
@@ -258,13 +258,15 @@ export default function Home() {
         )}
       </div>
 
-      <div className='mt-[50px] bg-[#EDF7F5] text-center w-full space-y-5 py-5'>
-        <h1 className='font-bold text-3xl'>Sampaikan Umpan Balik Anda</h1>
+      <div className='mt-[50px] bg-[#EDF7F5] text-center w-full space-y-3 md:space-y-5 py-5 px-[10px]'>
+        <h1 className='font-bold text-xl md:text-3xl'>
+          Sampaikan Umpan Balik Anda
+        </h1>
         <p>
           Tiap masukkan, saran, dan kritik anda sangat berarti untuk
           pengembangan kami berikutnya
         </p>
-        <div>
+        <div className='pt-[20px] md:pt-0'>
           <a
             href='https://forms.gle/gfWSfnkkKGh3tPsdA'
             target='_blank'
