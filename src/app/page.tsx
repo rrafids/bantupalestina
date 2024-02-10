@@ -51,7 +51,7 @@ export default function Home() {
           className='absolute w-full h-[722px]'
         >
           <Image
-            src='/images/banner_palestine_1.png'
+            src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/banner_palestine_1.png'
             layout='fill'
             objectFit='cover'
             alt='banner palestine 1'
@@ -83,7 +83,7 @@ export default function Home() {
           <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
-              src='/images/banner_fact_1.png'
+              src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/banner_fact_1.png'
               layout='fill'
               objectFit='cover'
               alt='banner fact 1'
@@ -92,7 +92,7 @@ export default function Home() {
           <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
-              src='/images/banner_fact_2.png'
+              src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/banner_fact_2.png'
               layout='fill'
               objectFit='cover'
               alt='banner fact 2'
@@ -101,7 +101,7 @@ export default function Home() {
           <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
-              src='/images/banner_fact_3.png'
+              src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/banner_fact_3.png'
               layout='fill'
               objectFit='cover'
               alt='banner fact 3'
@@ -110,7 +110,7 @@ export default function Home() {
           <div className='relative w-full h-[140px] sm:h-[250px] lg:h-[200px] xl:h-[250px] 2xl:h-[300px]'>
             <Image
               className='rounded-lg'
-              src='/images/banner_fact_4.png'
+              src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/banner_fact_4.png'
               layout='fill'
               objectFit='cover'
               alt='banner fact 4'
@@ -126,7 +126,7 @@ export default function Home() {
       <div className='relative w-full h-[100px] sm:h-[150px] md:h-[200px] xl:h-[300px] my-[50px]'>
         <Image
           className='rounded-lg'
-          src='/images/hadits_muslim.png'
+          src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/hadits_muslim.png'
           layout='fill'
           objectFit='cover'
           alt='banner fact 4'
@@ -135,7 +135,7 @@ export default function Home() {
 
       <div className='relative w-full h-[100px] sm:h-[200px] md:h-[300px] xl:h-[550px]'>
         <Image
-          src='/images/banner_palestine_3.png'
+          src='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/banner_palestine_3.png'
           layout='fill'
           objectFit='cover'
           alt='banner fact 4'
