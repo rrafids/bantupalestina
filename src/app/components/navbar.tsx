@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Logo from './logo';
 import { useState } from 'react';
 
@@ -27,7 +26,11 @@ export default function Navbar() {
     >
       <Logo />
       <div>
-        <button className='bg-primary py-2 px-5 rounded'>Cari Donasi</button>
+        <a href='#list-donation'>
+          <button className='bg-primary py-2 px-5 rounded hover:bg-green-600'>
+            Cari Donasi
+          </button>
+        </a>
       </div>
     </div>
   );
