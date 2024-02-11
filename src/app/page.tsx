@@ -150,8 +150,8 @@ export default function Home() {
           Temukan Sumber Donasi Terpercaya
         </h1>
         <p className='text-gray-600'>
-          Kami mengumpulkan berbagai sumber campaign donasi untuk Palestina yang
-          terpercaya dan sudah divalidasi keaslian informasinya
+          Berbagai opsi donasi terpercaya yang telah divalidasi keaslian
+          informasinya
         </p>
 
         <div className='flex flex-col space-y-2'>
@@ -285,6 +285,9 @@ export default function Home() {
         <div className='flex space-x-5'>
           <Link href='#list-donation'>
             <h1 className='text-white'>Daftar Donasi</h1>
+          </Link>
+          <Link href='https://api.whatsapp.com/send/?phone=6282377019571&text&type=phone_number&app_absent=0'>
+            <h1 className='text-white'>Punya info donasi?</h1>
           </Link>
         </div>
       </footer>
