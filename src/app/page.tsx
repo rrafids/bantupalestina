@@ -188,8 +188,8 @@ export default function Home() {
               <thead className='text-gray-700 font-bold bg-gray-200 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
                   <th className='p-2 text-center'>No</th>
-                  <th className='p-2'>Penyelenggara</th>
-                  <th className='p-2'>Campaign</th>
+                  <th className='p-2'>Lembaga</th>
+                  <th className='p-2'>Inisiator</th>
                   <th className='p-2 text-center'>Aksi</th>
                 </tr>
               </thead>
