@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Logo from './components/logo';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 interface Response {
   data: iWebsite[];
