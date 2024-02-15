@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         <Navbar />
 
-        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] px-[10pxc] md:px-[100px] lg:px-[150px] space-y-[30px]'>
+        <div className='text-white flex flex-col items-center text-center mt-[250px] 2xl:mt-[300px] px-[10px] md:px-[100px] lg:px-[150px] space-y-[30px]'>
           <span className='text-[30px] md:text-[50px] lg:text-[60px] font-bold md:leading-[75px]'>
             Cari Sumber Donasi Terpercaya untuk Palestina
           </span>
@@ -279,11 +279,11 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className='bg-gray-800 w-full flex place-content-between items-center p-7'>
+      <footer className='bg-gray-800 w-full flex place-content-between items-center p-7 space-x-3 text-sm sm:text-md'>
         <div>
           <Logo />
         </div>
-        <div className='flex space-x-5'>
+        <div className='flex space-x-3'>
           <Link href='#list-donation'>
             <h1 className='text-white'>Daftar Donasi</h1>
           </Link>
