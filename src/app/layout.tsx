@@ -8,6 +8,15 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Support Palestine',
   description: 'Sumber informasi donasi terpercaya untuk Palestina',
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: 'https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/favicon.ico',
+        href: 'https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/favicon.ico',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -19,8 +28,9 @@ export default function RootLayout({
     <html lang='en'>
       <Head>
         <link
-          rel='shortcut icon'
-          href='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/bp_logo.png'
+          rel='icon'
+          href='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/favicon.ico'
+          sizes='any'
         />
       </Head>
 
