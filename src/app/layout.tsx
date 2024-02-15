@@ -6,7 +6,7 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Support Palestine',
+  title: 'Bantu Palestina',
   description: 'Sumber informasi donasi terpercaya untuk Palestina',
   icons: {
     icon: [
